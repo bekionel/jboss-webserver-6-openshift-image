@@ -118,7 +118,7 @@ modules:
           - name: os-jws-launch
             version: "3.0"
           - name: os-jws-https
-            version: "3.0"
+            version: "4.0"
           - name: os-jws-rm-root
             version: "3.0"
           - name: os-jws-rm-defaults
