@@ -1,6 +1,6 @@
-# Red Hat JBoss Web Server 5.7 OpenShift container image on UBI8
+# Red Hat JBoss Web Server 6.0 OpenShift container image on UBI8
 
-Components are available in the tomcat9 directory.
+Components are available in the tomcat10 directory.
 
 # License
 
