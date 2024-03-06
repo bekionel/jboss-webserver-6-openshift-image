@@ -2,8 +2,8 @@ schema_version: 1
 
 name: "jboss-webserver-6/jws60-openjdk17-rhel8-openshift"
 description: "Red Hat JBoss Web Server 6.0 - Tomcat 10 OpenShift container image with OpenJDK17 on UBI8"
-version: "6.0.0"
-from: "jboss-webserver-6/webserver60-openjdk17-tomcat10-rhel8:6.0.0"
+version: "6.0.1"
+from: "jboss-webserver-6/webserver60-openjdk17-tomcat10-rhel8:6.0.1"
 labels:
     - name: "com.redhat.component"
       value: "jboss-webserver-60-openjdk17-rhel8-openshift-container"
@@ -86,7 +86,7 @@ modules:
           - name: cct_module
             git:
                   url: https://github.com/jboss-openshift/cct_module.git
-                  ref: 0.45.5
+                  ref: 0.45.6
           - name: jboss-eap-modules
             git:
                   url: https://github.com/jboss-container-images/jboss-eap-modules.git
@@ -103,7 +103,7 @@ modules:
           - name: s2i-common
           - name: os-jws-s2i
             version: "3.0"
-          - name: jws8-conffiles
+          - name: jws6-conffiles
             version: "1.0"
           - name: rm-manager
             version: "1.0"
@@ -129,14 +129,13 @@ modules:
           - name: jboss.container.util.logging.bash
           - name: os-eap-python
             version: "3.6"
-          - name: jws5-logging
+          - name: jws6-logging
+            version: "1.0"
+          - name: jboss.container.java.jvm.bash
             version: "1.0"
           - name: jboss.container.java.singleton-jdk
           - name: os-jws-prometheus
             version: "3.0"
-          - name: jboss.container.java.jvm.bash
-            version: "2.0"
-  
 
 packages:
       content_sets_file: content_sets.yml
@@ -159,5 +158,4 @@ osbs:
                       - x86_64
                       - s390x
                       - ppc64le
-                      - aarch64  
-
+                      - aarch64
