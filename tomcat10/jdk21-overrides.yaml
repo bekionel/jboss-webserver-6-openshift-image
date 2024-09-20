@@ -1,0 +1,34 @@
+schema_version: 1
+
+name: "jboss-webserver-6/jws60-openjdk21-rhel8-openshift"
+description: "Red Hat JBoss Web Server 6.0 - Tomcat 10 OpenShift container image with OpenJDK21 on UBI8"
+version: "6.0.3"
+from: "jboss-webserver-6/webserver60-openjdk21-tomcat10-rhel8:6.0.3"
+labels:
+    - name: "com.redhat.component"
+      value: "jboss-webserver-60-openjdk21-rhel8-openshift-container"
+    - name: "io.k8s.description"
+      value: "Platform for building and running web applications on JBoss Web Server 6.0 with OpenJDK21 - Tomcat v10"
+modules:
+      repositories:
+          - name: cct_module
+            git:
+                  url: https://github.com/jboss-openshift/cct_module.git
+                  ref: 0.45.6
+          - name: jboss-eap-modules
+            git:
+                  url: https://github.com/jboss-container-images/jboss-eap-modules.git
+                  ref: master
+          - name: jboss-jws-modules
+            git:
+                  url: https://github.com/web-servers/jboss-jws-container-images-modules
+                  ref: main
+          - path: custom-modules
+      install:
+          - name: jboss.container.maven
+            version: "3.8.21"
+
+osbs:
+      repository:
+            name: containers/jboss-webserver-openjdk21-tomcat10
+            branch: jws-6.0-openshift-dev-rhel-8
