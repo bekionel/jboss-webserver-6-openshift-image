@@ -1,0 +1,72 @@
+{
+    "kind": "List",
+    "apiVersion": "v1",
+    "metadata": {
+        "name": "webserver61-openjdk17-tomcat10-ubi8-image-stream",
+        "annotations": {
+            "description": "ImageStream definition for Red Hat JBoss Web Server 6.1 Apache Tomcat 10 OpenJDK17 on UBI8.",
+            "openshift.io/provider-display-name": "Red Hat, Inc."
+        }
+    },
+    "items": [
+        {
+            "kind": "ImageStream",
+            "apiVersion": "image.openshift.io/v1",
+            "metadata": {
+                "name": "jboss-webserver61-openjdk17-tomcat10-openshift-ubi8",
+                "annotations": {
+                    "openshift.io/display-name": "JBoss Web Server 6.1 Apache Tomcat 10 OpenJDK17 on UBI8",
+                    "openshift.io/provider-display-name": "Red Hat, Inc.",
+                    "version": "6.1"
+                }
+            },
+            "labels": {
+                "jws61jdk17ubi8": "6.1.0"
+            },
+            "spec": {
+                "tags": [
+                    {
+                        "name": "latest",
+                        "annotations": {
+                            "description": "JBoss Web Server 6.1 Apache Tomcat 10 OpenJDK17 on UBI8 S2I images.",
+                            "iconClass": "icon-rh-tomcat",
+                            "tags": "builder,tomcat,tomcat10,java,jboss,hidden",
+                            "supports": "tomcat10:6.1,tomcat:10,java:17",
+                            "sampleRepo": "https://github.com/web-servers/tomcat-websocket-chat-quickstart.git",
+                            "sampleContextDir": "tomcat-websocket-chat",
+                            "version": "latest",
+                            "openshift.io/display-name": "JBoss Web Server 6.1 Apache Tomcat 10 OpenJDK17 on UBI8"
+                        },
+			"referencePolicy": {
+                            "type": "Local"
+                        },
+                        "from": {
+                            "kind": "DockerImage",
+                            "name": "registry.redhat.io/jboss-webserver-6/jws61-openjdk17-openshift-rhel8:latest"
+                        }
+                    },
+                    {
+                        "name": "6.1.0",
+                        "annotations": {
+                            "description": "JBoss Web Server 6.1 Apache Tomcat 10 OpenJDK17 on UBI8 S2I images.",
+                            "iconClass": "icon-rh-tomcat",
+                            "tags": "builder,tomcat,tomcat10,java,jboss,hidden",
+                            "supports": "tomcat10:6.1,tomcat:10,java:17",
+                            "sampleRepo": "https://github.com/web-servers/tomcat-websocket-chat-quickstart.git",
+                            "sampleContextDir": "tomcat-websocket-chat",
+                            "version": "6.1.0",
+                            "openshift.io/display-name": "JBoss Web Server 6.1 Apache Tomcat 10 OpenJDK17 on UBI8"
+                        },
+			"referencePolicy": {
+                            "type": "Local"
+                        },
+                        "from": {
+                            "kind": "DockerImage",
+                            "name": "registry.redhat.io/jboss-webserver-6/jws61-openjdk17-openshift-rhel8:6.1.0"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
