@@ -112,10 +112,6 @@ modules:
             version: "3.0"
           - name: os-jws-hello
             version: "3.0"
-          - name: jboss.container.jolokia
-            version: "8.2"
-          - name: os-jws-jolokia
-            version: "3.0"
           - name: os-jws-launch
             version: "3.0"
           - name: os-jws-https
@@ -136,8 +132,6 @@ modules:
             version: "1.1"
           - name: jboss.container.java.singleton-jdk
             version: "1.1"
-          - name: os-jws-prometheus
-            version: "3.0"
 
 packages:
       manager: microdnf
