@@ -95,10 +95,6 @@ modules:
             git:
                   url: https://github.com/web-servers/jboss-jws-container-images-modules.git
                   ref: main
-          - name: openjdk
-            git:
-                  url: https://github.com/rh-openjdk/redhat-openjdk-containers.git
-                  ref: ubi9
           - path: custom-modules
       install:
           - name: jboss.container.maven
