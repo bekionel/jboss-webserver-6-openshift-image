@@ -124,8 +124,6 @@ modules:
             version: "3.0"
           - name: openshift-passwd
           - name: jboss.container.util.logging.bash
-          - name: os-eap-python
-            version: "3.6"
           - name: jws6-logging
             version: "1.0"
           - name: jboss.container.java.jvm.bash

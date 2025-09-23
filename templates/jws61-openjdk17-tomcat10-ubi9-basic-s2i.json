@@ -7,17 +7,17 @@
             "openshift.io/provider-display-name": "Red Hat, Inc.",
             "tags": "tomcat,tomcat10,java,jboss",
             "version": "6.1",
-            "openshift.io/display-name": "JBoss Web Server 6.1 Apache Tomcat 10 OpenJDK21 on UBI8 (no https)",
+            "openshift.io/display-name": "JBoss Web Server 6.1 Apache Tomcat 10 OpenJDK17 on UBI9 (no https)",
             "description": "An example JBoss Web Server application. For more information about using this template, see https://github.com/jboss-openshift/application-templates.",
             "template.openshift.io/long-description": "This template defines resources needed to develop Red Hat JBoss Web Server 6.1 Apache Tomcat 10 based application, including a build configuration, and an application deployment configuration.",
             "template.openshift.io/documentation-url": "https://access.redhat.com/documentation/en/red-hat-jboss-web-server/",
             "template.openshift.io/support-url": "https://access.redhat.com"
         },
-        "name": "jws61-openjdk21-tomcat10-ubi8-basic-s2i"
+        "name": "jws61-openjdk17-tomcat10-ubi9-basic-s2i"
     },
     "labels": {
-        "template": "jws61-openjdk21-tomcat10-ubi8-basic-s2i",
-        "jws61jdk21ubi8": "6.1.2"
+        "template": "jws61-openjdk17-tomcat10-ubi9-basic-s2i",
+        "jws61jdk17ubi9": "6.1.2"
     },
     "message": "A new JWS application for Apache Tomcat 10 has been created in your project.",
     "parameters": [
@@ -183,7 +183,7 @@
                         "from": {
                             "kind": "ImageStreamTag",
                             "namespace": "${IMAGE_STREAM_NAMESPACE}",
-                            "name": "jboss-webserver61-openjdk21-tomcat10-openshift-ubi8:6.1.2"
+                            "name": "jboss-webserver61-openjdk17-tomcat10-openshift-ubi9:6.1.2"
                         }
                     }
                 },
