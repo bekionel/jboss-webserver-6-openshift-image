@@ -1,12 +1,12 @@
 schema_version: 1
 
-name: "jboss-webserver-6/jws61-openjdk21-rhel8-openshift"
-description: "Red Hat JBoss Web Server 6.1 - Tomcat 10 OpenShift container image with OpenJDK21 on UBI8"
+name: "jboss-webserver-6/jws61-openjdk21-rhel9-openshift"
+description: "Red Hat JBoss Web Server 6.1 - Tomcat 10 OpenShift container image with OpenJDK21 on UBI9"
 version: "6.1.2"
-from: "jboss-webserver-6-webserver61-openjdk21-tomcat10-rhel8:6.1.2"
+from: "jboss-webserver-6-webserver61-openjdk21-tomcat10-rhel9:6.1.2"
 labels:
     - name: "com.redhat.component"
-      value: "jboss-webserver-61-openjdk21-rhel8-openshift-container"
+      value: "jboss-webserver-61-openjdk21-rhel9-openshift-container"
     - name: "io.k8s.description"
       value: "Platform for building and running web applications on JBoss Web Server 6.1 with OpenJDK21 - Tomcat v10"
 modules:
@@ -26,9 +26,9 @@ modules:
           - path: custom-modules
       install:
           - name: jboss.container.maven
-            version: "3.8.21"
+            version: "3.9.21"
 
 osbs:
       repository:
             name: containers/jboss-webserver-openjdk21-tomcat10
-            branch: jws-6.1-openshift-dev-rhel-8
+            branch: jws-6.1-openshift-dev-rhel-9

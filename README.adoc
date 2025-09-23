@@ -1,4 +1,4 @@
-# Red Hat JBoss Web Server 6.0 OpenShift container image on UBI8
+# Red Hat JBoss Web Server 6.1 OpenShift container image on UBI9
 
 Components are available in the tomcat10 directory.
 

@@ -1,12 +1,12 @@
 schema_version: 1
 
-name: "jboss-webserver-6/jws61-openjdk17-rhel8-openshift"
-description: "Red Hat JBoss Web Server 6.1 - Tomcat 10 OpenShift container image with OpenJDK17 on UBI8"
+name: "jboss-webserver-6/jws61-openjdk17-rhel9-openshift"
+description: "Red Hat JBoss Web Server 6.1 - Tomcat 10 OpenShift container image with OpenJDK17 on UBI9"
 version: "6.1.2"
-from: "jboss-webserver-6-webserver61-openjdk17-tomcat10-rhel8:6.1.2"
+from: "jboss-webserver-6-webserver61-openjdk17-tomcat10-rhel9:6.1.2"
 labels:
     - name: "com.redhat.component"
-      value: "jboss-webserver-61-openjdk17-rhel8-openshift-container"
+      value: "jboss-webserver-61-openjdk17-rhel9-openshift-container"
     - name: "io.k8s.description"
       value: "Platform for building and running web applications on JBoss Web Server 6.1 with OpenJDK17 - Tomcat v10"
     - name: "io.k8s.display-name"
@@ -95,10 +95,14 @@ modules:
             git:
                   url: https://github.com/web-servers/jboss-jws-container-images-modules.git
                   ref: main
+          - name: openjdk
+            git:
+                  url: https://github.com/rh-openjdk/redhat-openjdk-containers.git
+                  ref: ubi9
           - path: custom-modules
       install:
           - name: jboss.container.maven
-            version: "3.8.17"
+            version: "3.9.17"
           - name: dynamic-resources
             version: "1.1"
           - name: s2i-common
@@ -140,6 +144,7 @@ modules:
             version: "3.0"
 
 packages:
+      manager: microdnf
       content_sets_file: content_sets.yml
       install:
           - python3-pyyaml
@@ -150,7 +155,7 @@ run:
 osbs:
       repository:
             name: containers/jboss-webserver-openjdk17-tomcat10
-            branch: jws-6.1-openshift-dev-rhel-8
+            branch: jws-6.1-openshift-dev-rhel-9
       configuration:
           container:
               compose:
