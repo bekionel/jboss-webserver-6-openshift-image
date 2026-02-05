@@ -1,14 +1,14 @@
 schema_version: 1
 
-name: "jboss-webserver-6/jws61-openjdk21-rhel8-openshift"
-description: "Red Hat JBoss Web Server 6.1 - Tomcat 10 OpenShift container image with OpenJDK21 on UBI8"
-version: "6.1.3"
-from: "jboss-webserver-6-webserver61-openjdk21-tomcat10-rhel8:6.1.3"
+name: "jboss-webserver-6/jws62-openjdk21-rhel8-openshift"
+description: "Red Hat JBoss Web Server 6.2 - Tomcat 10 OpenShift container image with OpenJDK21 on UBI8"
+version: "6.2.0"
+from: "jboss-webserver-6-webserver62-openjdk21-tomcat10-rhel8:6.2.0"
 labels:
     - name: "com.redhat.component"
-      value: "jboss-webserver-61-openjdk21-rhel8-openshift-container"
+      value: "jboss-webserver-62-openjdk21-rhel8-openshift-container"
     - name: "io.k8s.description"
-      value: "Platform for building and running web applications on JBoss Web Server 6.1 with OpenJDK21 - Tomcat v10"
+      value: "Platform for building and running web applications on JBoss Web Server 6.2 with OpenJDK21 - Tomcat v10"
 modules:
       repositories:
           - name: cct_module
@@ -31,4 +31,4 @@ modules:
 osbs:
       repository:
             name: containers/jboss-webserver-openjdk21-tomcat10
-            branch: jws-6.1-openshift-dev-rhel-8
+            branch: jws-6.2-openshift-dev-rhel-8

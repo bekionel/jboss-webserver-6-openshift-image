@@ -1,16 +1,16 @@
 schema_version: 1
 
-name: "jboss-webserver-6/jws61-openjdk17-rhel8-openshift"
-description: "Red Hat JBoss Web Server 6.1 - Tomcat 10 OpenShift container image with OpenJDK17 on UBI8"
-version: "6.1.3"
-from: "jboss-webserver-6-webserver61-openjdk17-tomcat10-rhel8:6.1.3"
+name: "jboss-webserver-6/jws62-openjdk17-rhel8-openshift"
+description: "Red Hat JBoss Web Server 6.2 - Tomcat 10 OpenShift container image with OpenJDK17 on UBI8"
+version: "6.2.0"
+from: "jboss-webserver-6-webserver62-openjdk17-tomcat10-rhel8:6.2.0"
 labels:
     - name: "com.redhat.component"
-      value: "jboss-webserver-61-openjdk17-rhel8-openshift-container"
+      value: "jboss-webserver-62-openjdk17-rhel8-openshift-container"
     - name: "io.k8s.description"
-      value: "Platform for building and running web applications on JBoss Web Server 6.1 with OpenJDK17 - Tomcat v10"
+      value: "Platform for building and running web applications on JBoss Web Server 6.2 with OpenJDK17 - Tomcat v10"
     - name: "io.k8s.display-name"
-      value: "JBoss Web Server 6.1 OpenJDK17"
+      value: "JBoss Web Server 6.2 OpenJDK17"
     - name: "io.openshift.expose-services"
       value: "8080:http"
     - name: "io.openshift.tags"
@@ -23,7 +23,7 @@ envs:
     - name: "STI_BUILDER"
       value: "jee"
     - name: JWS_HTTPS_CERTIFICATE_DIR
-      example: /opt/jws-6.1/tomcat/conf
+      example: /opt/jws-6.2/tomcat/conf
     - name: JWS_HTTPS_CERTIFICATE
       example: server.crt
     - name: JWS_HTTPS_CERTIFICATE_KEY
@@ -146,11 +146,11 @@ packages:
 run:
       user: 185
       cmd:
-          - "/opt/jws-6.1/tomcat/bin/launch.sh"
+          - "/opt/jws-6.2/tomcat/bin/launch.sh"
 osbs:
       repository:
             name: containers/jboss-webserver-openjdk17-tomcat10
-            branch: jws-6.1-openshift-dev-rhel-8
+            branch: jws-6.2-openshift-dev-rhel-8
       configuration:
           container:
               compose:
