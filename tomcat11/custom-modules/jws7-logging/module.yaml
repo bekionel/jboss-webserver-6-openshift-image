@@ -1,5 +1,5 @@
 schema_version: 1
-name: "jws6-logging"
+name: "jws7-logging"
 version: "1.0"
 description: jws-logging script package.
 execute:
