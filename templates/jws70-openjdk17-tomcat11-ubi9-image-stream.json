@@ -2,9 +2,9 @@
     "kind": "List",
     "apiVersion": "v1",
     "metadata": {
-        "name": "webserver62-openjdk21-tomcat10-ubi9-image-stream",
+        "name": "webserver70-openjdk17-tomcat11-ubi9-image-stream",
         "annotations": {
-            "description": "ImageStream definition for Red Hat JBoss Web Server 6.2 Apache Tomcat 10 OpenJDK21 on UBI9.",
+            "description": "ImageStream definition for Red Hat JBoss Web Server 7.0 Apache Tomcat 11 OpenJDK17 on UBI9.",
             "openshift.io/provider-display-name": "Red Hat, Inc."
         }
     },
@@ -13,56 +13,56 @@
             "kind": "ImageStream",
             "apiVersion": "image.openshift.io/v1",
             "metadata": {
-                "name": "jboss-webserver62-openjdk21-tomcat10-openshift-ubi9",
+                "name": "jboss-webserver70-openjdk17-tomcat11-openshift-ubi9",
                 "annotations": {
-                    "openshift.io/display-name": "JBoss Web Server 6.2 Apache Tomcat 10 OpenJDK21 on UBI9",
+                    "openshift.io/display-name": "JBoss Web Server 7.0 Apache Tomcat 11 OpenJDK17 on UBI9",
                     "openshift.io/provider-display-name": "Red Hat, Inc.",
-                    "version": "6.2"
+                    "version": "7.0"
                 }
             },
             "labels": {
-                "jws62jdk21ubi9": "6.2.0"
+                "jws70jdk17ubi9": "7.0.0"
             },
             "spec": {
                 "tags": [
                     {
                         "name": "latest",
                         "annotations": {
-                            "description": "JBoss Web Server 6.2 Apache Tomcat 10 OpenJDK21 on UBI9 S2I images.",
+                            "description": "JBoss Web Server 7.0 Apache Tomcat 11 OpenJDK17 on UBI9 S2I images.",
                             "iconClass": "icon-rh-tomcat",
-                            "tags": "builder,tomcat,tomcat10,java,jboss,hidden",
-                            "supports": "tomcat10:6.2,tomcat:10,java:21",
+                            "tags": "builder,tomcat,tomcat11,java,jboss,hidden",
+                            "supports": "tomcat11:7.0,tomcat:11,java:17",
                             "sampleRepo": "https://github.com/web-servers/tomcat-websocket-chat-quickstart.git",
                             "sampleContextDir": "tomcat-websocket-chat",
                             "version": "latest",
-                            "openshift.io/display-name": "JBoss Web Server 6.2 Apache Tomcat 10 OpenJDK21 on UBI9"
+                            "openshift.io/display-name": "JBoss Web Server 7.0 Apache Tomcat 11 OpenJDK17 on UBI9"
                         },
 			"referencePolicy": {
                             "type": "Local"
                         },
                         "from": {
                             "kind": "DockerImage",
-                            "name": "registry.redhat.io/jboss-webserver-6/jws62-openjdk21-openshift-rhel9:latest"
+                            "name": "registry.redhat.io/jboss-webserver-7/jws70-openjdk17-openshift-rhel9:latest"
                         }
                     },
                     {
-                        "name": "6.2.0",
+                        "name": "7.0.0",
                         "annotations": {
-                            "description": "JBoss Web Server 6.2 Apache Tomcat 10 OpenJDK21 on UBI9 S2I images.",
+                            "description": "JBoss Web Server 7.0 Apache Tomcat 11 OpenJDK17 on UBI9 S2I images.",
                             "iconClass": "icon-rh-tomcat",
-                            "tags": "builder,tomcat,tomcat10,java,jboss,hidden",
-                            "supports": "tomcat10:6.2,tomcat:10,java:21",
+                            "tags": "builder,tomcat,tomcat11,java,jboss,hidden",
+                            "supports": "tomcat11:7.0,tomcat:11,java:17",
                             "sampleRepo": "https://github.com/web-servers/tomcat-websocket-chat-quickstart.git",
                             "sampleContextDir": "tomcat-websocket-chat",
-                            "version": "6.2.0",
-                            "openshift.io/display-name": "JBoss Web Server 6.2 Apache Tomcat 10 OpenJDK21 on UBI9"
+                            "version": "7.0.0",
+                            "openshift.io/display-name": "JBoss Web Server 7.0 Apache Tomcat 11 OpenJDK17 on UBI9"
                         },
 			"referencePolicy": {
                             "type": "Local"
                         },
                         "from": {
                             "kind": "DockerImage",
-                            "name": "registry.redhat.io/jboss-webserver-6/jws62-openjdk21-openshift-rhel9:6.2.0"
+                            "name": "registry.redhat.io/jboss-webserver-7/jws70-openjdk17-openshift-rhel9:7.0.0"
                         }
                     }
                 ]

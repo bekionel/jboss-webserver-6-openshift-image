@@ -5,21 +5,21 @@
         "annotations": {
             "iconClass": "icon-rh-tomcat",
             "openshift.io/provider-display-name": "Red Hat, Inc.",
-            "tags": "tomcat,tomcat10,java,jboss",
-            "version": "6.2",
-            "openshift.io/display-name": "JBoss Web Server 6.2 Apache Tomcat 10 OpenJDK21 on UBI9 (no https)",
+            "tags": "tomcat,tomcat11,java,jboss",
+            "version": "7.0",
+            "openshift.io/display-name": "JBoss Web Server 7.0 Apache Tomcat 11 OpenJDK21 on UBI9 (no https)",
             "description": "An example JBoss Web Server application. For more information about using this template, see https://github.com/jboss-openshift/application-templates.",
-            "template.openshift.io/long-description": "This template defines resources needed to develop Red Hat JBoss Web Server 6.2 Apache Tomcat 10 based application, including a build configuration, and an application deployment configuration.",
+            "template.openshift.io/long-description": "This template defines resources needed to develop Red Hat JBoss Web Server 7.0 Apache Tomcat 11 based application, including a build configuration, and an application deployment configuration.",
             "template.openshift.io/documentation-url": "https://access.redhat.com/documentation/en/red-hat-jboss-web-server/",
             "template.openshift.io/support-url": "https://access.redhat.com"
         },
-        "name": "jws62-openjdk21-tomcat10-ubi9-basic-s2i"
+        "name": "jws70-openjdk21-tomcat11-ubi9-basic-s2i"
     },
     "labels": {
-        "template": "jws62-openjdk21-tomcat10-ubi9-basic-s2i",
-        "jws62jdk21ubi9": "6.2.0"
+        "template": "jws70-openjdk21-tomcat11-ubi9-basic-s2i",
+        "jws70jdk21ubi9": "7.0.0"
     },
-    "message": "A new JWS application for Apache Tomcat 10 has been created in your project.",
+    "message": "A new JWS application for Apache Tomcat 11 has been created in your project.",
     "parameters": [
         {
             "displayName": "Application Name",
@@ -183,7 +183,7 @@
                         "from": {
                             "kind": "ImageStreamTag",
                             "namespace": "${IMAGE_STREAM_NAMESPACE}",
-                            "name": "jboss-webserver62-openjdk21-tomcat10-openshift-ubi9:6.2.0"
+                            "name": "jboss-webserver70-openjdk21-tomcat11-openshift-ubi9:7.0.0"
                         }
                     }
                 },
