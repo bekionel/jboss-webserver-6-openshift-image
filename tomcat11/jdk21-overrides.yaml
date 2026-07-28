@@ -2,8 +2,8 @@ schema_version: 1
 
 name: "jboss-webserver-7/jws70-openjdk21-rhel9-openshift"
 description: "Red Hat JBoss Web Server 7.0 - Tomcat 11 OpenShift container image with OpenJDK21 on UBI9"
-version: "7.0.0"
-from: "jboss-webserver-7-webserver70-openjdk21-tomcat11-rhel9:7.0.0"
+version: "7.0.1"
+from: "jboss-webserver-7-webserver70-openjdk21-tomcat11-rhel9:7.0.1"
 labels:
     - name: "com.redhat.component"
       value: "jboss-webserver-70-openjdk21-rhel9-openshift-container"

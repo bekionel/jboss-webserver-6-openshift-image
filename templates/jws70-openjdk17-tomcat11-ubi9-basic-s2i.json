@@ -17,7 +17,7 @@
     },
     "labels": {
         "template": "jws70-openjdk17-tomcat11-ubi9-basic-s2i",
-        "jws70jdk17ubi9": "7.0.0"
+        "jws70jdk17ubi9": "7.0.1"
     },
     "message": "A new JWS application for Apache Tomcat 11 has been created in your project.",
     "parameters": [
@@ -183,7 +183,7 @@
                         "from": {
                             "kind": "ImageStreamTag",
                             "namespace": "${IMAGE_STREAM_NAMESPACE}",
-                            "name": "jboss-webserver70-openjdk17-tomcat11-openshift-ubi9:7.0.0"
+                            "name": "jboss-webserver70-openjdk17-tomcat11-openshift-ubi9:7.0.1"
                         }
                     }
                 },

@@ -21,7 +21,7 @@
                 }
             },
             "labels": {
-                "jws70jdk17ubi9": "7.0.0"
+                "jws70jdk17ubi9": "7.0.1"
             },
             "spec": {
                 "tags": [
@@ -43,6 +43,26 @@
                         "from": {
                             "kind": "DockerImage",
                             "name": "registry.redhat.io/jboss-webserver-7/jws70-openjdk17-openshift-rhel9:latest"
+                        }
+                    },
+                    {
+                        "name": "7.0.1",
+                        "annotations": {
+                            "description": "JBoss Web Server 7.0 Apache Tomcat 11 OpenJDK17 on UBI9 S2I images.",
+                            "iconClass": "icon-rh-tomcat",
+                            "tags": "builder,tomcat,tomcat11,java,jboss,hidden",
+                            "supports": "tomcat11:7.0,tomcat:11,java:17",
+                            "sampleRepo": "https://github.com/web-servers/tomcat-websocket-chat-quickstart.git",
+                            "sampleContextDir": "tomcat-websocket-chat",
+                            "version": "7.0.1",
+                            "openshift.io/display-name": "JBoss Web Server 7.0 Apache Tomcat 11 OpenJDK17 on UBI9"
+                        },
+			"referencePolicy": {
+                            "type": "Local"
+                        },
+                        "from": {
+                            "kind": "DockerImage",
+                            "name": "registry.redhat.io/jboss-webserver-7/jws70-openjdk17-openshift-rhel9:7.0.1"
                         }
                     },
                     {
